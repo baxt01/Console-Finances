@@ -106,3 +106,37 @@ for(var i = 0; i < amounts.length; i++) {
   sum += amounts[i];
 }
 console.log("Total: $" + sum);
+
+// getting the adverage change.
+var adverage1 = sum / amounts.length-1;
+console.log("adverage change: " + adverage1);
+// Setting up some variables going to be needed.
+var half = amounts.length / 2;
+console.log("Value of Half: " + half);
+var i = 0;
+var temp3 = [];
+// Running a while loop to get the differences and conver that into adverage high / low.
+while (i < amounts.length-1) {
+  // Getting the average increase.
+  //finding the highest value.
+    var temp = amounts[i];
+    var temp1 = amounts[i+1];
+    var temp2 = temp - temp1;
+    temp3.push(temp2);
+  
+  i+=2;
+  }
+// Finding the highest difference.  
+var high = Math.max(...temp3);
+// Finding the lowest difference.
+var low = Math.min(...temp3);
+// Getting the index of the highest / lowest.
+indeOfHigh = temp3.indexOf(high);
+indexOfLow = temp3.indexOf(low);
+// getting the orignal inde to print the month out.
+convert = indeOfHigh - 1;
+convert2 = indexOfLow - 1;
+convert1 = convert * 2;
+convert3 = convert2 * 2;
+console.log(" Greatest Increase in Profits/Losses: " + dates[convert] + " " +  high);
+console.log("Greatest Decrease in Profits/Losses: " + dates[convert2] + " " + low);
