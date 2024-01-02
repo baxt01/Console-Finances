@@ -95,3 +95,14 @@ let splitFinances = finances.reduce((acc,v)=>{
 },[dates=[], amounts=[]]);
 // Adding the text lines at the start of the read out.
 console.log(" ```text \n" + "Financial Analysis  \n" + "---------------- \n");
+
+var totalMonths = dates.length + 1;
+// output for the Total Months. 
+console.log("Total Months: " + totalMonths);
+
+// Adding the total of amounts together.
+let sum = 0;
+for(var i = 0; i < amounts.length; i++) {
+  sum += amounts[i];
+}
+console.log("Total: $" + sum);
