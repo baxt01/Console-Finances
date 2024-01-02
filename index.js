@@ -109,10 +109,9 @@ console.log("Total: $" + sum);
 
 // getting the adverage change.
 var adverage1 = sum / amounts.length-1;
-console.log("adverage change: " + adverage1);
+console.log("adverage change: " + Math.floor(adverage1));
 // Setting up some variables going to be needed.
 var half = amounts.length / 2;
-console.log("Value of Half: " + half);
 var i = 0;
 var temp3 = [];
 // Running a while loop to get the differences and conver that into adverage high / low.
@@ -138,5 +137,5 @@ convert = indeOfHigh - 1;
 convert2 = indexOfLow - 1;
 convert1 = convert * 2;
 convert3 = convert2 * 2;
-console.log(" Greatest Increase in Profits/Losses: " + dates[convert] + " " +  high);
+console.log("Greatest Increase in Profits/Losses: " + dates[convert] + " " +  high);
 console.log("Greatest Decrease in Profits/Losses: " + dates[convert2] + " " + low);
