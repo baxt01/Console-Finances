@@ -102,7 +102,11 @@ console.log("Total Months: " + totalMonths);
 
 // Adding the total of amounts together.
 let sum = 0;
-for(var i = 0; i < amounts.length; i++) {
+for(var i = 0; i < x; i++) {
   sum += amounts[i];
 }
 console.log("Total: $" + sum);
+
+// getting the adverage change.
+var adverage1 = sum / amounts.length-1;
+console.log("adverage change: " + adverage1);
