@@ -86,3 +86,12 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+
+// Taking the original 2D array Finances and splitting it into 2 1D arrays dates and amounts.
+let splitFinances = finances.reduce((acc,v)=>{
+  acc[0].push(v[0]);
+  acc[1].push(v[1]);
+  return acc
+},[dates=[], amounts=[]]);
+// Adding the text lines at the start of the read out.
+console.log(" ```text \n" + "Financial Analysis  \n" + "---------------- \n");
